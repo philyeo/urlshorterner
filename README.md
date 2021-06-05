@@ -1,6 +1,6 @@
 # [URL Shortener Microservice](https://www.freecodecamp.org/learn/apis-and-microservices/apis-and-microservices-projects/url-shortener-microservice)
 
-DISCLAIMER: This project is based upon freecodecamp's boilerplate URL Microservice project implementation. Most of the structure is already there except, the implementation of post and get. Modificications were also made to the view, UI interactions, and a swagger based doc was added to the project as well for API documentation
+DISCLAIMER: This project is based upon freecodecamp's boilerplate URL Microservice project implementation. Most of the structure is already there except, the implementation of post and get. Modifications were also made to the view, UI interactions, and a swagger based doc was added to the project as well for API documentation
 
 This project is hosted in replit.com, https://replit.com/@philyeo/boilerplate-project-urlshortener
 To be able to run the application LIVE, head over to the link above, and click on the 'RUN' button.

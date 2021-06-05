@@ -10,3 +10,5 @@ The URL Shortener microservice application should look like as shown below <br>
 To visit the API documentation, head over to https://boilerplate-project-urlshortener.philyeo.repl.co/api-docs
 The API documentation uses Swagger that follows Open API Specification (OAS) V3.0 standards <br>
 <img src="/public/2021-06-05 10_53_18.png" alt="apidocs"/><br>
+The API endpoints works within Postman / curl call, and has also been intergrated with the UI front-end of the current application itself.
+The application uses MongoDB as a backend NoSQL db.

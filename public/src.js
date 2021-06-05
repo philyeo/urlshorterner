@@ -29,10 +29,10 @@
         response.json().then(function(parsedJson) {
 
           console.log('this is the parsed result json: ', parsedJson);
-          navigator.clipboard.writeText(window.location.hostname + "/api/shorten/" + parsedJson['short_url']);
-          $("#success").css("display", "block");
+          var oriUrl = parsedJson['original_url'];
+          window.location.href = oriUrl;
+
         })
-        // var res = JSON.parse();
         
       }).catch(err => {
         console.log(err)

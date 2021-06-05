@@ -13,6 +13,12 @@ const port = process.env.PORT || 3000;
 const dbUri = process.env['DB_URI'];
 
 /**
+ * Swagger innitiation
+ */
+const swaggerUi = require('swagger-ui-express');
+swaggerDocument = require('./swagger.json');
+
+/**
  * Connects to mongo db logs connected if connection successfull
  * else logs fail
  */
@@ -35,6 +41,12 @@ app.use(bodyParser.json());
 app.use(cors());
 
 app.use('/public', express.static(`${process.cwd()}/public`));
+
+app.use(
+  '/api-docs',
+  swaggerUi.serve, 
+  swaggerUi.setup(swaggerDocument)
+);
 
 app.get('/', function(req, res) {
   res.sendFile(process.cwd() + '/views/index.html');
@@ -101,7 +113,7 @@ app.get('/api/shorturl/:input', (req, res) => {
 
   shortUrl.findOne({short_url: input}, (error, result) => {
     if(!error && result != undefined) {
-      res.redirect(result.original_url);
+      res.json({'original_url': result.original_url});
     } else {
       res.json('Url not found');
     }

@@ -1,0 +1,70 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "URL Shortener Microservice",
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/api/shorturl/new": {
+      "post": {
+        "description": "Shorten a new URL",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "url": {
+                    "type": "string",
+                    "example": "https://editor.swagger.io/"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "The URL was shorten"
+          }
+        }
+      }
+    },
+    "/api/shorturl/{input}": {
+      "get": {
+        "parameters": [
+          {
+            "in": "path",
+            "name": "input",
+            "description": "Retrieve the original URL",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "example": 23
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The original url returned",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "items": {
+                    "properties": {
+                      "url": {
+                        "type": "string",
+                        "example": "https://editor.swagger.io/"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

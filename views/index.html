@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>URL Shortener Microservice</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous" />
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-sha1/0.6.0/sha1.min.js" crossorigin="anonymous"></script>
+    <meta charset="UTF-8" />    
+     <link href="/public/style.css" rel="stylesheet" type="text/css" />
+
+  </head>
+<style>
+    html {
+        margin: 0;
+        background: #FFFDD0;
+        /* fallback for old browsers */
+        background: -webkit-linear-gradient(to left, #FFFDD0, #FFFDD0);
+        /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to left, #FFFDD0, #FFFDD0);
+        /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    }
+    
+    body {
+        background: transparent;
+    }
+    
+    .inputs {
+        padding: 10px;
+        background-color: #FFFFFF;
+        border-radius: 5px;
+        box-shadow: 0px 5px 23px -12px rgba(0, 0, 0, 0.75);
+        transition: all .25s ease;
+    }
+    
+    .inputs:hover {
+        box-shadow: 0px 10px 23px -12px rgba(0, 0, 0, 0.75);
+    }
+</style>
+  <body>
+    <h1>URL Shortener Microservice</h1>
+    <main>
+
+    <form class="form-inline" style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: space-around; margin-bottom: 0;">
+        <div class="form-group inputs" style="flex-wrap: wrap; max-width: 375px;">
+            <div style="width: 100%; display: flex;">
+                <div class="form-group" style="margin-left: 0px !important; margin-bottom: 0px !important; width: calc(100% - 100px);">
+                    <input class="form-control" type="text" placeholder="URL" id="url" style="width: 100%;">
+                </div>
+                <button class="btn btn-primary mb-2" type="button" id="shorten" style="margin-bottom: 0px !important; margin-left: 10px;" onclick="return false">Shorten</button>
+            </div>
+            <div class="alert alert-success" role="alert" id="success" style="margin-bottom: 0; margin-top: 10px; width: 100%; text-align: center; display: none;">
+                URL shortened and copied to clipboard!
+            </div>
+        </div>
+    </form>
+
+    </main>
+    <footer>
+      <footer>
+        <script src="public/src.js"></script>
+      </footer>
+    </footer>
+  </body>
+  
+</html>

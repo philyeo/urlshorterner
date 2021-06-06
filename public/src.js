@@ -25,7 +25,7 @@
         body: JSON.stringify({
           url: theurl
         })
-      }).then(function(response)  {
+      }).then(function(response)  { //promise to facilitate with the async nature of the post request
         response.json().then(function(parsedJson) {
 
           console.log('this is the parsed result json: ', parsedJson);

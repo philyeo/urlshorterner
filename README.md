@@ -1,5 +1,8 @@
 # [URL Shortener Microservice](https://www.freecodecamp.org/learn/apis-and-microservices/apis-and-microservices-projects/url-shortener-microservice)
 
+Changes as of 14 June:
+- Added DockerFile for local deployment to Docker container
+
 DISCLAIMER: This project is based upon freecodecamp's boilerplate URL Microservice project implementation. Most of the structure is already there except, the implementation of post and get. Modifications were also made to the view, UI interactions, and a swagger based doc was added to the project as well for API documentation
 
 This project is hosted in replit.com, https://replit.com/@philyeo/boilerplate-project-urlshortener
